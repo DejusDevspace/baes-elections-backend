@@ -23,7 +23,7 @@ db.connect((err) => {
 // Middleware
 app.use(
   cors({
-    origin: ["https://baeselections.vercel.app/"],
+    origin: ["https://baeselections.vercel.app"],
     credentials: true,
   })
 );
