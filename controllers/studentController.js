@@ -21,6 +21,10 @@ export const loginStudent = async (req, res) => {
 
     const student = result.rows[0];
 
+    if (student.level === 500) {
+      return res.status(404).json({ message: "You are not eligible to vote" });
+    }
+
     // const isPinValid = await bcrypt.compare(pin, student.pin);
     const isPinValid = pin == student.pin;
 
